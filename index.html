@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crawler Hub</title>
+    <link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <video id="banner" src="bannerr.mp4" muted autoplay loop playsinline></video>
+        <section id="search">
+            <input id="searchBox" autocomplete="off"  type="text" placeholder="SEARCH"/>
+            <img id="searchIcon" src="search.png" onclick="searchQuery()"/>
+        </section>
+    </header>
+    <main>
+        <section id="displayContent">
+            <div id="image" onclick="PhotoDisplay()">IMAGE</div>
+            <div id="video" onclick="VideoDisplay()">VIDEO</div>
+        </section>
+        <section>
+            <div id="image-content"></div>
+            <div id="video-content"></div>
+        </section>
+        <section id="BeforeSearch">
+            <img src="spider.png"/>
+        </section>
+         <div id="displayText">WHAT ARE YOU LOOKING FOR TODAY?</div>
+    </main>
+    <script src="index.js"></script>
+    <footer id="footer">
+        <div>Images and videos provided by&emsp;</div>
+        <div><a href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">Pixabay</a>API</div>
+    </footer>
+</body>
+</html>
