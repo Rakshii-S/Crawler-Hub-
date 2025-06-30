@@ -1,0 +1,3 @@
+const CONFIG = {
+    API_KEY: "50801075-b697a43be65efaa926589ee83"
+}

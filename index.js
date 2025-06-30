@@ -1,4 +1,5 @@
-const API = '50801075-b697a43be65efaa926589ee83';
+
+const API = CONFIG.API_KEY;
 
 if(window.innerWidth <= 570)
 {
@@ -88,7 +89,6 @@ async function fetchContentImage(contentType, URL)
             data.hits.forEach(hit => {
             if(hit.type === contentType)
             {
-  
                 //CARD MAIN ELEMENT CREATION AND STYLING
                 const card = document.createElement('div')
                 card.style.backgroundColor = "rgb(49, 25, 55)";
