@@ -7,10 +7,8 @@
 
 /*HEADER*/
 #banner{
-    height: 200px;
     width:100vw;
-    margin:0px;
-    margin-top:-20px;
+    position: sticky;
 }
 
 #search{
@@ -77,7 +75,7 @@
 
 #displayText{
     display: flex;
-    font-size: 20px;
+    font-size: 15px;
     justify-content: center;
     color: white;
 }
@@ -85,6 +83,7 @@
 #image-content{
     margin:30px;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap:wrap;
 }
@@ -92,6 +91,7 @@
 #video-content{
     margin:30px;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap:wrap;
 }
@@ -113,4 +113,25 @@ footer>div{
 footer>div>a{
     background-color: rgb(49, 25, 55);
     color:white;
+}
+
+@media screen and (max-width:890px){
+    *{
+        font-size: 10px;
+    }
+    #searchBox{
+        height:30px;
+        width:50vw;
+        font-size: 10px;
+    }
+    #searchIcon{
+        height:30px;
+        width:30px;
+    }
+    #BeforeSearch > img{
+        width: 110px;
+    }
+    #displayText{
+        font-size: 10px;
+    }
 }

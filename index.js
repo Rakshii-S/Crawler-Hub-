@@ -1,20 +1,21 @@
 const API = '50801075-b697a43be65efaa926589ee83';
 
-// Only load video if screen is wide enough
-    window.addEventListener('resize', ()=>{
-      if (window.innerWidth <= 1500) {
-        const video = document.getElementById("banner");
-        video.src = "banner.mp4";
-        video.width = "100vw";
-        video.margin = "0px";
-      }else{
-        const video = document.getElementById("banner");
-        video.src = "bannerr.mp4";
-        video.width = "100vw";
-        video.margin = "0px";
-      }
-    })
-
+if(window.innerWidth <= 570)
+{
+  banner.src = "banner.mp4";
+}else{
+  banner.src = "bannerr.mp4";
+}
+//
+window.addEventListener('resize', ()=>{
+    const banner = document.getElementById("banner");
+    if(window.innerWidth <= 570)
+    {
+        banner.src = "banner.mp4";
+    }else{
+        banner.src = "bannerr.mp4";
+    }
+})
 //from search iput box
 function searchQuery()
 {
@@ -97,7 +98,7 @@ async function fetchContentImage(contentType, URL)
                 card.style.borderRadius = "20px";
                 card.style.margin = "20px";
                 card.style.padding = "20px";
-                card.style.height = "430px";
+                card.style.height = "400px";
 
                 //CARD TOP ELEMENTS CREATION AND STYLING
                 cardTop = CardTop(hit.userImageURL, hit.user, hit.pageURL)
@@ -106,8 +107,8 @@ async function fetchContentImage(contentType, URL)
                 const img = document.createElement('img');
                 img.src = hit.largeImageURL;
                 img.alt = hit.tags;
-                img.style.width = '280px';
-                img.style.height = '280px';
+                img.style.width = '250px';
+                img.style.height = '250px';
                 img.addEventListener("click",()=>{
                   window.open(hit.largeImageURL, "_blank");
                 })
@@ -155,7 +156,7 @@ async function fetchContentVideo(contentType, URL)
               card.style.borderRadius = "20px";
               card.style.margin = "20px";
               card.style.padding = "20px";
-              card.style.height = "430px";
+              card.style.height = "400px";
 
               //CARD TOP ELEMENTS CREATION AND STYLING
               cardTop = CardTop(hit.userImageURL, hit.user, hit.pageURL)
@@ -166,8 +167,8 @@ async function fetchContentVideo(contentType, URL)
               v.autoplay = true;    // Enables autoplay
               v.load();
               v.play();
-              v.style.width = '280px'
-              v.style.height = '280px'
+              v.style.width = '250px'
+              v.style.height = '250px'
               v.addEventListener('click', function() {
                 // Open the video source in a new tab
                 window.open(hit.videos.medium.url, '_blank');
