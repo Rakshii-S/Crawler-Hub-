@@ -7,7 +7,7 @@ if(window.innerWidth <= 570)
 }else{
   banner.src = "bannerr.mp4";
 }
-//
+
 window.addEventListener('resize', ()=>{
     const banner = document.getElementById("banner");
     if(window.innerWidth <= 570)
@@ -123,7 +123,9 @@ async function fetchContentImage(contentType, URL)
             }
           });
         } else {
-          console.log('No hits found.');
+            document.getElementById("BeforeSearch").style.display = "flex";
+            document.getElementById("displayText").style.display ="flex";
+            document.getElementById("displayText").innerHTML = "Content Not Found!!!";
         }
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -184,7 +186,9 @@ async function fetchContentVideo(contentType, URL)
             }
           });
         } else {
-          console.log('No hits found.');
+            document.getElementById("BeforeSearch").style.display = "flex";
+            document.getElementById("displayText").style.display ="flex";
+            document.getElementById("displayText").innerHTML = "Content Not Found!!!";
         }
 
       } catch (error) {

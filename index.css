@@ -50,7 +50,7 @@
     justify-content: center;
     background-color: black;
     border-radius: 10px;
-    width: 40vw;
+    width:40vw;
     color: white;
     height: 20px;
     margin:0 10px;
@@ -67,7 +67,6 @@
 }
 
 #BeforeSearch > img{
-    margin-top:20px;
     margin-bottom: 30px;
     width: 150px;
     justify-items: center;
@@ -96,22 +95,25 @@
     flex-wrap:wrap;
 }
 
-footer{
-    display: none;
-    background-color: rgb(49, 25, 55);
-    color: white;
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
     justify-content: center;
-     height: 50px;
-     margin-top:30px;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 50px;
 }
 
 footer>div{
-    background-color: rgb(49, 25, 55);
-    padding-top:17px;
+    background-color: black;
 }
 
 footer>div>a{
-    background-color: rgb(49, 25, 55);
+    background-color:black;
     color:white;
 }
 
